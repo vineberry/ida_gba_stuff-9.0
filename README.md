@@ -16,4 +16,5 @@ Thank you to laqieer and mrsteyk for the plugin!
 Just because it works for me doesn't mean it'll work for everyone. If you're unable to load the plugin on your IDA, please open an issue with the following:
 - IDA version (the exact one, like 9.0.20241216, RC, and whether free/home/pro)
 - Console output describing the error
+
 And, if needed or wanted, feel free to open a pull request! 
