@@ -87,8 +87,13 @@ def load_file(li, neflags, format):
         li.file2base(0, entry_form_ea, entry_to_ea, 1)
         ida_funcs.add_func(entry_form_ea)
         idaapi.add_entry(EntryPoint, EntryPoint, "start", 1)
-        idaapi.cvar.inf.startIP = EntryPoint
-        idaapi.cvar.inf.beginEA = EntryPoint
+        # idaapi.cvar.inf.startIP and beginEA are borked
+        # in IDA 9.0. Removed for ease. Equivalent
+        # functions instead. Everything else appears
+        # to function fine.
+        inf = idaapi.cvar
+        inf.start_ea = EntryPoint
+        inf.beginEA = EntryPoint
 
         ida_lines.add_extra_cmt(ROM_START, True, "ROM HEADER")
 
